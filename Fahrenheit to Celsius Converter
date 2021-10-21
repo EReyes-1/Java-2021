@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class F2C {
+    
+    public static final void main(String[] args) {
+        
+       Scanner sc = new Scanner(System.in);
+        
+       System.out.println("What is the temperature in fahrenheit you would like to convert?"); 
+        
+         
+       int temperature = sc.nextInt();
+       
+        // The formula for conversion from F to C is ((temperature (in F) - 32) multiplied by 5/9)
+        // Integer division truncates results
+       int temperature_1 = (((temperature - 32) * 5) /9);
+        
+       System.out.println("The converted temperature is " + temperature_1 + " degrees Celsius."); 
+       
+       
+        
+        
+    }
+    
+    
+}
