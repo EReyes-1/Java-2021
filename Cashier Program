@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Change {
+    
+    public static final void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+            
+        System.out.println("Please provide me with the total amount due for the item(s) in pennies.");
+        
+        int amount_due = sc.nextInt();
+        
+        System.out.println("Please provide me with the total amount received from the customer in pennies.");
+            
+        int amount_received = sc.nextInt();
+        
+        int change = (amount_received - amount_due);
+        
+        int dollars = (change / 100); // The amount of pennies in a dollar
+        change = change % 100; 
+        
+        int quarters = (change / 25); // 25 pennies is the value of 1 quarter
+        change = change % 25;
+        
+        int dimes = (change / 10); // 10 pennies is the value of 1 dime 
+        change = change % 10;
+        
+        int nickels = (change / 5); // 5 pennies is the value of 1 nickel
+        change = change % 5;
+        
+        int pennies = change;  
+        
+        System.out.println("Your change is " + dollars + " dollar(s), " + quarters + " quarters(s), " + dimes + " dime(s), " + nickels + " nickel(s), " + "and " + pennies + " pennie(s).");
+       
+    }
+    
+    
+}
