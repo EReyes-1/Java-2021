@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Minutes {
+    
+    public static final void main(String[] args) {
+        
+       Scanner sc = new Scanner(System.in);
+        
+       System.out.println("Please provide me with a number of hours, days, weeks, and years." + " We will be converting these values into minutes.");
+           
+           int hours = sc.nextInt();
+           int days = sc.nextInt();
+           int weeks = sc.nextInt();
+           int years = sc.nextInt();
+           
+           int hours_1 = (hours * 60); //60 minutes in an hour
+           int days_1 = (days * 1440); //1440 minutes in a day
+           int weeks_1 = (weeks * 10080); //10080 minutes in a week
+           int years_1 = (years * 525600); //525600 minutes in a year
+           
+           int total_time = (hours * 60) + (days * 1440) + (weeks * 10080) + (years * 525600);
+             
+        System.out.println(hours + " hour(s) amounts to " + hours_1 + " minutes.");
+        System.out.println(days + " day(s) amounts to " + days_1 + " minutes.");
+        System.out.println(weeks + " week(s) amounts to " + weeks_1 + " minutes.");  
+        System.out.println(years + " year(s) amounts to " + years_1 + " minutes.");
+        
+        System.out.println("The total time in minutes is " + total_time + " minute(s)."); //This will compute the total amount of minutes for the input provided by the user. 
+        
+        
+    }
+    
+    
+}
